@@ -1,0 +1,53 @@
+<section id="contact">
+    <div class="container">
+        <ul>
+            <li><a routerLink="/">home</a></li>
+            <span>/</span>
+            <li><a routerLink="/contact">contact</a></li>
+        </ul>
+    
+
+
+    <div class="contacts">
+        <div class="left">
+            <div class="box">
+                <div class="title">
+                    <i class='bx bxs-phone'></i>
+                    <h3>call to us</h3>
+                </div>
+                <div class="info">
+                    <p>We are available 24/7, 7 days a week</p>
+                    <p>  Phone: +8801611112222</p>
+                </div>
+            </div>
+
+            <div class="line"></div>
+            <div class='box'>
+                <div class="title">
+                    <i class='bx bxs-message-rounded-dots' ></i>
+                    <h3>Write To US</h3>
+                    </div>
+                    <p>Fill out our form and we will contact you within 24 hours</p>
+                    <p>Emails: customer{{email}}</p>
+                    <p>Emails: support{{email}}</p>
+                </div>
+        </div>
+
+        
+
+    <form>
+        <input type="text" placeholder="Your Name*">
+        <input type="email" placeholder="Your Email*">
+        <input type="tel" placeholder="Your Phone*">
+        <br>
+        <div class="msg_contact">
+            <textarea placeholder="Your Message" [maxLength]="100" (keydown)="writing($event)"></textarea>
+            <span class="quaintity_msg" >{{quantity}}</span>
+        </div>
+       
+        
+        <button type="submit">Send Message</button>
+    </form>
+    </div>
+</div>
+</section>

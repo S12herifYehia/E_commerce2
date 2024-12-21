@@ -1,0 +1,115 @@
+<section id="checkout">
+  <div class="container">
+    <ul>
+      <li><a href="#">account</a></li>
+      <span>/</span>
+      <li><a routerLink="/myaccount">my account</a></li>
+      <span>/</span>
+      <li><a routerLink="/product_details">product</a></li>
+      <span>/</span>
+      <li><a routerLink="/cart">view cart</a></li>
+      <span>/</span>
+      <li><a routerLink="/checkout">checkout</a></li>
+    </ul>
+
+    <div class="banks">
+      <form class="left">
+        <h2>Billing Details</h2>
+        <div class="box">
+          <label for="name">first name<span>*</span></label>
+          <input type="text" id="name" />
+        </div>
+        <div class="box">
+          <label for="company">Company name<span>*</span></label>
+          <input type="text" id="company" />
+        </div>
+        <div class="box">
+          <label for="street">street address<span>*</span></label>
+          <input type="text" id="street" />
+        </div>
+        <div class="box">
+          <label for="floor">Apartment, floor, etc. (optional)</label>
+          <input type="text" id="floor" />
+        </div>
+        <div class="box">
+          <label for="city">Town/City<span>*</span></label>
+          <input type="text" id="city" />
+        </div>
+        <div class="box">
+          <label for="phone">Phone Number<span>*</span></label>
+          <input type="text" id="phone" />
+        </div>
+        <div class="box">
+          <label for="email">Email Address<span>*</span></label>
+          <input type="email" id="email" />
+        </div>
+        <div class="checked_save">
+          <input type="checkbox" id="check" checked />
+          <label for="check"
+            >Save this information for faster check-out next tim</label
+          >
+        </div>
+      </form>
+      <div class="right">
+        <div class="head">
+          <div class="product">
+            <div class="title_pro">
+              <img src="assets/home/todays1.png" alt="todays1" />
+              <h4>LCD Monitor</h4>
+            </div>
+            <div class="price">$650</div>
+          </div>
+          <div class="product">
+            <div class="title_pro">
+              <img src="assets/home/todays3.png" alt="todays1" />
+              <h4>H1 Gamepad</h4>
+            </div>
+            <div class="price">$1100</div>
+          </div>
+          <div class="total_price">
+            <div class="box">
+              <h4>Subtotal:</h4>
+              <div class="price">$1750</div>
+            </div>
+            <div class="line"></div>
+            <div class="box">
+              <h4>Shipping:</h4>
+              <div class="price">free</div>
+            </div>
+            <div class="line"></div>
+            <div class="box">
+              <h4>Total:</h4>
+              <div class="price">$1750</div>
+            </div>
+          </div>
+        </div>
+        <form class="body_bank">
+          <div class="bank_box">
+            <div class="choose">
+              <input type="radio" id="radio" name="radio" />
+              <label for="radio">Bank</label>
+            </div>
+            <div class="imgs">
+              <img src="assets/checkout/1.png" alt="checkout" />
+              <img src="assets/checkout/2.png" alt="checkout" />
+              <img src="assets/checkout/3.png" alt="checkout" />
+              <img src="assets/checkout/4.png" alt="checkout" />
+            </div>
+          </div>
+
+          <div class="bank_box">
+            <div class="choose">
+              <input type="radio" id="radio" name="radio" checked />
+              <label for="radio">Cash</label>
+            </div>
+          </div>
+          <div class="coupon">
+            <input type="text" placeholder="coupon code" />
+            <button type="submit">Apply Coupon</button>
+          </div>
+          <a href="#">Place Order</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

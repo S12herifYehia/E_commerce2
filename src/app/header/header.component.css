@@ -1,0 +1,231 @@
+header {
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background-color: white;
+  transition: 0.4s;
+  margin-bottom: 20px;
+}
+header.changeback {
+  background-color: rgba(219, 68, 68, 0.6117647059);
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+header .container .toggle {
+  display: none;
+  justify-content: flex-end;
+  flex: 1;
+}
+header .container .toggle i {
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+  header .container .toggle {
+    display: flex;
+  }
+}
+header .container .logo a {
+  text-transform: capitalize;
+  font-size: 24px;
+  color: #000000;
+}
+@media (max-width: 992px) {
+  header .container .logo a {
+    font-size: 18px;
+  }
+}
+header .container .links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+header .container .links.active {
+  display: flex;
+  transform: scale(1) rotate(360deg);
+}
+header .container .links a {
+  width: 80px;
+  text-align: center;
+}
+header .container .links a.actived {
+  background-color: #f5f5f5;
+}
+@media (max-width: 768px) {
+  header .container .links a.actived {
+    background-color: transparent;
+  }
+}
+@media (max-width: 768px) {
+  header .container .links {
+    transition: 0.5s;
+    transform: scale(0) rotate(0deg);
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 10000;
+    top: 100%;
+    padding: 20px;
+    border-radius: 0px 0px 5px 5px;
+  }
+  header .container .links::after {
+    content: "";
+    position: absolute;
+    right: 95px;
+    top: -28px;
+    border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+    border-width: 15px;
+    border-style: solid;
+  }
+}
+header .container .links .search_inp {
+  width: 243px;
+  height: 38px;
+  position: relative;
+}
+header .container .links .search_inp input {
+  background-color: #f5f5f5;
+  width: 100%;
+  border-radius: 4px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 7px 12px 7px 20px;
+  border: 0;
+  outline: 0;
+  font-size: 12px;
+}
+header .container .links .search_inp .bx-search-alt-2 {
+  position: absolute;
+  font-size: 20px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+header .container .links li a {
+  margin-right: 20px;
+  color: #000000;
+  text-transform: capitalize;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  font-size: 16px;
+}
+@media (max-width: 992px) {
+  header .container .links li a {
+    font-size: 14px;
+    margin-right: 3px;
+  }
+}
+@media (max-width: 768px) {
+  header .container .links li a {
+    color: #ffffff;
+    font-size: 14px;
+  }
+}
+header .container .links li a:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 65%;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+header .container .search_com {
+  display: flex;
+  align-items: center;
+}
+header .container .search_com .icons {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+header .container .search_com .icons .quaintity {
+  position: relative;
+}
+header .container .search_com .icons .quaintity .count {
+  position: absolute;
+  right: -3px;
+  top: -5px;
+  width: 16px;
+  height: 16px;
+  background-color: #DB4444;
+  border-radius: 50%;
+  color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 400;
+}
+header .container .search_com .icons i {
+  margin: 0 5px;
+  display: block;
+  cursor: pointer;
+  font-size: 18px;
+}
+header .container .search_com .icons i:nth-child(3).active {
+  color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #DB4444;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+header .container .search_com .icons .drop_down {
+  position: absolute;
+  left: -131px;
+  top: calc(100% + 20px);
+  background: linear-gradient(360deg, #2a2929, #8b6688);
+  padding: 10px;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  width: 224px;
+  min-height: 208px;
+  border-radius: 4px;
+  align-items: flex-start;
+  display: none;
+  transition: 0.6s;
+}
+header .container .search_com .icons .drop_down.active {
+  display: block;
+}
+header .container .search_com .icons .drop_down::after {
+  content: "";
+  position: absolute;
+  right: 2px;
+  top: -28.5px;
+  border-width: 15px;
+  border-color: transparent transparent #735770 transparent;
+  border-style: solid;
+}
+header .container .search_com .icons .drop_down a {
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+header .container .search_com .icons .drop_down a i {
+  display: inline-block;
+  margin-right: 16px;
+}
+header .links a {
+  color: white;
+}/*# sourceMappingURL=header.component.css.map */

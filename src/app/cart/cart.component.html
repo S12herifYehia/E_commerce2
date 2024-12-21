@@ -1,0 +1,82 @@
+<section id="cart">
+  <div class="container">
+    <ul>
+      <li><a routerLink="/">home</a></li>
+      <span>/</span>
+      <li><a routerLink="/cart">cart</a></li>
+    </ul>
+
+    <table>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+      </tr>
+      <tr *ngFor="let pro of arr">
+        <td>
+          <div class="imgs">
+            <i class="bx bx-window-close" (click)="remove(pro)"></i>
+            <img [src]="pro.imgurl" alt="cart" />
+            <p>{{ pro.title }}</p>
+          </div>
+        </td>
+        <td>
+          {{ pro.price }}
+        </td>
+        <td>
+          <form action="">
+            <input
+              type="number"
+              name=""
+              id=""
+              value="0"
+              #num
+              
+              [value]="pro.quantity || 0"
+              (change)="onChangeNum(pro, num.value)"
+            />
+          </form>
+        </td>
+        <!-- [value]="pro.quantity || 0" -->
+        <td>
+          {{pro.totalPrice || 0  }}
+        </td>
+      </tr>
+      <tr *ngIf="arr.length == 0">
+        <td colspan="4"><h1>No Data</h1></td>
+      </tr>
+      <tr>
+        <td><button type="button">return to shop</button></td>
+        <td></td>
+        <td></td>
+        <td><button type="button">update cart</button></td>
+      </tr>
+    </table>
+
+    <div class="carts">
+      <form class="coupon_code">
+        <input type="text" placeholder="Coupon Code" />
+        <button type="submit">Apply Coupon</button>
+      </form>
+      <div class="cart_total">
+        <h2>Cart Total</h2>
+        <div class="flexes">
+          <h4>Subtotal:</h4>
+          <p class="price">{{ quan }}</p>
+        </div>
+        <div class="line"></div>
+        <div class="flexes">
+          <h4>Shipping:</h4>
+          <p class="price">Free</p>
+        </div>
+        <div class="line"></div>
+        <div class="flexes">
+          <h4>Total:</h4>
+          <p class="price">{{ quan }}</p>
+        </div>
+        <a class="process" routerLink="/checkout">Procees to checkout</a>
+      </div>
+    </div>
+  </div>
+</section>

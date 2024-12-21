@@ -1,0 +1,98 @@
+#create_account{
+    padding: 100px 0px;
+    .container{
+        display: flex;
+        align-items: center;
+        gap: 48px;
+        @media(max-width:992px){
+            flex-direction: column;
+        }
+        .image{
+            img{
+                width: 700px;
+                @media (max-width:768px){
+                    width: 100%;
+                }
+            }
+            
+        }
+
+        form{
+            h2{
+                font-size: 30px;
+                font-weight: 400;
+               
+            }
+            p{
+                margin: 15px 0px;
+                font-size: 16px;
+                font-weight: 400;
+            }
+            input{
+                display: block;
+                width: 100%;
+                outline: 0;
+                border: 0;
+                height: 32px;
+                margin-bottom: 15px;
+                // box-shadow: 0px 3px 3px #0000004d;
+                border-bottom: 1px solid #0000004d;
+                font-size: 16px;
+                padding: 10px;
+
+             
+            }
+
+            button{
+                padding:16px 122px 16px 122px;
+                background-color: #DB4444;
+                margin: 10px 0px;
+                font-size: 16px;
+                font-weight: 400;
+                color: #ffffffff;
+                border: 0;
+                border-radius: 4px;
+                cursor: pointer;
+                @media(max-width:768px){
+                    font-size: 12px;
+                }
+
+            }
+            .signgoogle{
+                display: flex;
+                align-items: center;
+                border: 1px solid #0000004d;
+                padding: 16px 86px 16px 86px;
+                border-radius: 4px;
+                font-size: 16px;
+                font-weight: 400;
+                @media(max-width:768px){
+                    font-size: 12px;
+                }
+                img{
+                    margin-right: 8px;
+                    width: 20px;
+                    @media(max-width:768px){
+                        width: 14px;
+                    }
+                }
+            }
+            .login{
+                font-size: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color:#00000081 ;
+                p{
+                    margin-right: 4px;
+                }
+                a{
+                    color:#00000081 ;
+                    &:hover{
+                        color: #000000;
+                    }
+                }
+            }
+        }
+    }
+}

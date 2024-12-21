@@ -1,0 +1,239 @@
+@charset "UTF-8";
+#cart .container ul {
+  display: flex;
+  margin-bottom: 20px;
+}
+#cart .container ul li a {
+  margin: 0px 10px;
+  text-transform: capitalize;
+  color: #000000;
+}
+#cart .container ul li:nth-child(1) a {
+  opacity: 30%;
+}
+#cart .container table {
+  width: 100%;
+  text-align: center;
+  border-collapse: separate; /* تأكد من أن الجدول لا يندمج */
+  border-spacing: 20px; /* تفعيل تباعد الخلايا */
+}
+@media (max-width: 768px) {
+  #cart .container table {
+    border-spacing: 8px;
+  }
+}
+#cart .container table tr {
+  box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.05);
+}
+#cart .container table tr td {
+  font-size: 16px;
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  #cart .container table tr td {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  #cart .container table tr th {
+    font-size: 12px;
+  }
+}
+#cart .container table tr th,
+#cart .container table tr td {
+  padding: 30px 0px;
+}
+#cart .container table tr th button,
+#cart .container table tr td button {
+  padding: 16px 48px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  text-transform: capitalize;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  #cart .container table tr th button,
+  #cart .container table tr td button {
+    padding: 10px 20px;
+    font-size: 9px;
+  }
+}
+#cart .container table tr th input,
+#cart .container table tr td input {
+  width: 72px;
+  height: 44px;
+  border-radius: 4px;
+  outline: 0;
+  padding: 5px;
+  border: 1.5px solid rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 768px) {
+  #cart .container table tr th input,
+  #cart .container table tr td input {
+    width: 55px;
+  }
+}
+#cart .container table tr th input::-webkit-inner-spin-button, #cart .container table tr th input ::-webkit-outer-spin-button,
+#cart .container table tr td input::-webkit-inner-spin-button,
+#cart .container table tr td input ::-webkit-outer-spin-button {
+  padding: 5px;
+  width: 16px;
+  height: 16px;
+  background-color: red !important;
+}
+@media (max-width: 768px) {
+  #cart .container table tr th input::-webkit-inner-spin-button, #cart .container table tr th input ::-webkit-outer-spin-button,
+  #cart .container table tr td input::-webkit-inner-spin-button,
+  #cart .container table tr td input ::-webkit-outer-spin-button {
+    padding: 2px;
+  }
+}
+#cart .container table tr th .imgs,
+#cart .container table tr td .imgs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#cart .container table tr th .imgs i,
+#cart .container table tr td .imgs i {
+  position: absolute;
+  left: 120px;
+  top: 3px;
+  width: 18px;
+  height: 18px;
+  background: #DB4444;
+  border-radius: 50%;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  #cart .container table tr th .imgs i,
+  #cart .container table tr td .imgs i {
+    left: -6px;
+    top: -3px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  #cart .container table tr th .imgs i,
+  #cart .container table tr td .imgs i {
+    left: 34px;
+  }
+}
+#cart .container table tr th .imgs img,
+#cart .container table tr td .imgs img {
+  width: 50px;
+  margin-right: 10px;
+}
+@media (max-width: 768px) {
+  #cart .container table tr th .imgs img,
+  #cart .container table tr td .imgs img {
+    width: 30px;
+  }
+}
+#cart .container .carts {
+  display: flex;
+  margin: 50px 0px;
+  justify-content: space-between;
+}
+@media (max-width: 992px) {
+  #cart .container .carts {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  #cart .container .carts .coupon_code {
+    display: flex;
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  #cart .container .carts .coupon_code {
+    margin-bottom: 40px;
+  }
+}
+#cart .container .carts .coupon_code input {
+  width: 300px;
+  height: 56px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 4px;
+  border: 1px solid #000000;
+  padding: 10px;
+  outline: 0;
+  margin-right: 16px;
+}
+@media (max-width: 768px) {
+  #cart .container .carts .coupon_code input {
+    width: 50%;
+    margin: 0;
+    border-radius: 4px 0px 0px 4px;
+  }
+}
+#cart .container .carts .coupon_code button {
+  width: 211px;
+  height: 56px;
+  border-radius: 4px;
+  background-color: #DB4444;
+  color: #ffffff;
+  border: 0;
+}
+@media (max-width: 768px) {
+  #cart .container .carts .coupon_code button {
+    width: 50%;
+    margin: 0;
+    border-radius: 0px 4px 4px 0px;
+  }
+}
+#cart .container .carts .cart_total {
+  width: 470px;
+  height: 276px;
+  border: 1.5px solid #000000;
+  border-radius: 4px;
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  #cart .container .carts .cart_total {
+    width: 100%;
+  }
+}
+#cart .container .carts .cart_total h2 {
+  font-size: 20px;
+  font-weight: 500px;
+  margin-bottom: 15px;
+}
+#cart .container .carts .cart_total .line {
+  margin: 10px 0px;
+}
+#cart .container .carts .cart_total .flexes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#cart .container .carts .cart_total .flexes h4, #cart .container .carts .cart_total .flexes p {
+  font-size: 16px;
+  font-weight: 400;
+}
+#cart .container .carts .cart_total .process {
+  width: 260px;
+  height: 56px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #DB4444;
+  color: #ffffff;
+  border-radius: 4px;
+  border: 0;
+  margin: 10px auto;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  line-height: 56px;
+}/*# sourceMappingURL=cart.component.css.map */

@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.shows {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4588235294);
+}
+
+::-moz-selection {
+  background-color: #000000;
+  color: #Db4444;
+}
+
+::selection {
+  background-color: #000000;
+  color: #Db4444;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  body, html {
+    overflow-x: hidden;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  color: #000000;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+p {
+  font-weight: 400;
+}
+
+section {
+  padding: 30px 0px;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  margin-top: 10px;
+}
+
+.glopal_heading {
+  margin: 30px 0px;
+}
+.glopal_heading .head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.glopal_heading .head span {
+  width: 20px;
+  height: 40px;
+  background: #Db4444;
+  border-radius: 4px;
+  margin-right: 15px;
+}
+.glopal_heading .head h3 {
+  font-size: 16px;
+  color: #Db4444;
+}
+.glopal_heading .body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.glopal_heading .body h2 {
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  margin-right: 87px;
+}
+@media (max-width: 768px) {
+  .glopal_heading .body h2 {
+    font-size: 15px;
+  }
+}
+.glopal_heading .body .clock {
+  display: flex;
+  flex: 1;
+}
+.glopal_heading .body .clock .clo {
+  margin-right: 4px;
+}
+.glopal_heading .body .clock .clo > span {
+  font-size: 12px;
+}
+.glopal_heading .body .clock .clo h3 {
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .glopal_heading .body .clock .clo h3 {
+    font-size: 16px;
+  }
+}
+.glopal_heading .body .clock .clo h3 span {
+  margin: 0px 8px;
+  display: inline-block;
+  color: #Db4444;
+  font-size: 20px;
+}
+.glopal_heading .body .clock .getscope {
+  color: #Db4444;
+  display: flex;
+  align-items: center;
+}
+.glopal_heading .body .arrow {
+  display: flex;
+  align-items: center;
+}
+.glopal_heading .body .arrow div {
+  width: 46px;
+  height: 46px;
+  background-color: #f5f5f5;
+  margin-right: 8px;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}/*# sourceMappingURL=styles.css.map */

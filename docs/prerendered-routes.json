@@ -1,0 +1,15 @@
+{
+  "routes": [
+    "/",
+    "/about",
+    "/cart",
+    "/checkout",
+    "/contact",
+    "/login",
+    "/myaccount",
+    "/not-found",
+    "/product_details",
+    "/signup",
+    "/wishlist"
+  ]
+}

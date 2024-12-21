@@ -1,0 +1,60 @@
+#notfound{
+    .container{
+        ul {
+            display: flex;
+            li {
+              a {
+                margin: 0px 10px;
+                text-transform: capitalize;
+                color: #000000;
+              }
+            }
+            li:nth-child(1) {
+              a {
+                opacity: 30%;
+              }
+            }
+          }
+
+          .info{
+            padding: 100px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            h2{
+                font-size: 110px;
+                letter-spacing: 3px;
+
+                @media(max-width:767px){
+                  font-size: 26px;
+                }
+
+
+                @media(min-width:768px) and (max-width:992px){
+                  font-size: 65px;
+                }
+                }
+                p{
+                    font-size: 16px;
+                    font-weight:400;
+                    margin-bottom:40px;
+
+                    @media(max-width:768px){
+                      font-size: 12px;
+                      margin: 40px 0px;
+                    }
+                }
+                a{
+                   padding: 16px 48px 16px 48px;
+                   background-color: #DB4444;
+                   color: #ffffff;
+                   border-radius: 4px;
+                               
+                }
+
+           
+          }
+    }
+}

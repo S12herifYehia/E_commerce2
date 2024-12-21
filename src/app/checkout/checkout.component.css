@@ -1,0 +1,267 @@
+@charset "UTF-8";
+#checkout .container ul {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#checkout .container ul li a {
+  margin: 0px 10px;
+  text-transform: capitalize;
+  color: #000000;
+  opacity: 30%;
+}
+@media (max-width: 768px) {
+  #checkout .container ul li a {
+    font-size: 10px;
+    margin: 0px 5px;
+  }
+}
+#checkout .container ul li:last-child a {
+  opacity: 1;
+}
+#checkout .container .banks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  #checkout .container .banks {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  #checkout .container .banks {
+    gap: 15px;
+  }
+}
+#checkout .container .banks h2 {
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  margin-bottom: 24px;
+}
+@media (max-width: 768px) {
+  #checkout .container .banks h2 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 768px) {
+  #checkout .container .banks .left {
+    width: 100%;
+  }
+}
+#checkout .container .banks .left .box {
+  margin-block: 32px;
+}
+#checkout .container .banks .left .box label {
+  display: block;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 8px;
+}
+#checkout .container .banks .left .box label span {
+  color: #db4444;
+}
+#checkout .container .banks .left .box input {
+  width: 470px;
+  height: 50px;
+  background-color: #f5f5f5;
+  border: 0;
+  outline: 0;
+  padding: 10px;
+}
+@media (max-width: 767px) {
+  #checkout .container .banks .left .box input {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  #checkout .container .banks .left .box input {
+    width: 380px;
+  }
+}
+#checkout .container .banks .left .checked_save {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  #checkout .container .banks .left .checked_save {
+    gap: 10px;
+  }
+}
+#checkout .container .banks .left .checked_save input {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 1px solid #000000;
+  position: relative;
+}
+@media (max-width: 768px) {
+  #checkout .container .banks .left .checked_save input {
+    width: 18px;
+    height: 18px;
+  }
+}
+#checkout .container .banks .left .checked_save input:checked {
+  background-color: #db4444;
+  border: 0;
+}
+#checkout .container .banks .left .checked_save input:checked::after {
+  content: "✓";
+  font-family: "Font Awesome 6 Free";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #f5f5f5;
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  #checkout .container .banks .left .checked_save input:checked::after {
+    font-size: 11px;
+  }
+}
+#checkout .container .banks .left .checked_save label {
+  font-size: 14px;
+  font-weight: 400;
+}
+#checkout .container .banks .right {
+  width: 527px;
+}
+@media (max-width: 768px) {
+  #checkout .container .banks .right {
+    width: 320px;
+  }
+}
+#checkout .container .banks .right .price {
+  font-size: 16px;
+  font-weight: 400;
+}
+#checkout .container .banks .right h4 {
+  font-size: 16px;
+  font-weight: 400;
+}
+#checkout .container .banks .right .head .product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+#checkout .container .banks .right .head .product .title_pro {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+#checkout .container .banks .right .total_price .box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#checkout .container .banks .right .total_price .line {
+  margin-block: 20px;
+}
+#checkout .container .banks .right .body_bank .bank_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 32px;
+}
+#checkout .container .banks .right .body_bank .bank_box .choose {
+  display: flex;
+  align-items: center;
+}
+#checkout .container .banks .right .body_bank .bank_box .choose input {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+}
+#checkout .container .banks .right .body_bank .bank_box .choose input:checked {
+  background-color: #000000;
+}
+#checkout .container .banks .right .body_bank .bank_box .choose label {
+  font-size: 16px;
+  font-weight: 400;
+}
+#checkout .container .banks .right .body_bank .bank_box .imgs {
+  display: flex;
+  align-items: center;
+}
+#checkout .container .banks .right .body_bank .bank_box .imgs img {
+  width: 30px;
+}
+#checkout .container .banks .right .body_bank .coupon input {
+  width: 300px;
+  height: 56px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #000000;
+  margin-right: 16px;
+  font-size: 16px;
+  font-weight: 400;
+}
+@media (max-width: 767px) {
+  #checkout .container .banks .right .body_bank .coupon input {
+    width: 210px;
+    margin-right: 3px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  #checkout .container .banks .right .body_bank .coupon input {
+    width: 170px;
+    margin-right: 5px;
+  }
+}
+#checkout .container .banks .right .body_bank .coupon button {
+  width: 211px;
+  height: 56px;
+  background-color: #DB4444;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 56px;
+  color: #ffffff;
+  border: 0;
+}
+@media (max-width: 767px) {
+  #checkout .container .banks .right .body_bank .coupon button {
+    width: 100px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  #checkout .container .banks .right .body_bank .coupon button {
+    width: 115px;
+  }
+}
+#checkout .container .banks .right .body_bank a {
+  width: 190px;
+  height: 56px;
+  border-radius: 4px;
+  background-color: #db4444;
+  text-align: center;
+  line-height: 56px;
+  color: #f5f5f5;
+  margin-top: 20px;
+}
+@media (max-width: 767px) {
+  #checkout .container .banks .right .body_bank a {
+    margin-inline: auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  #checkout .container .banks .right .body_bank a {
+    width: 135px;
+    margin-inline: auto;
+  }
+}
+#checkout .container .banks img {
+  width: 54px;
+}
+#checkout .container .banks img:not(:last-child) {
+  margin-right: 10px;
+}/*# sourceMappingURL=checkout.component.css.map */

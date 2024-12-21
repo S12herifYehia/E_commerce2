@@ -1,0 +1,96 @@
+<header>
+  <div class="container">
+    <div class="logo">
+      <a routerLink="/">exclusive</a>
+    </div>
+    <!-- <div class="toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div> -->
+    <div class="toggle" (click)="gettoggle()">
+      <i
+        class="fa-solid"
+        [ngClass]="{
+          'fa-bars': myboltoggle == false,
+          'fa-xmark': myboltoggle == true
+        }"
+      ></i>
+      <!-- <i class="fa-solid fa-xmark"></i> -->
+    </div>
+
+    <ul class="links" [class.active]="myboltoggle">
+      <li>
+        <a
+          routerLink="/"
+          [routerLinkActive]="'actived'"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="removedrop()"
+          >home</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/contact"
+          [routerLinkActive]="'actived'"
+          (click)="removedrop()"
+          >contact</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/about"
+          [routerLinkActive]="'actived'"
+          (click)="removedrop()"
+          >about</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/signup"
+          [routerLinkActive]="'actived'"
+          (click)="removedrop()"
+          >sign up</a
+        >
+      </li>
+      <form class="search_inp">
+        <input type="text" placeholder="What are you looking for?" #cust (keydown.enter)="showAll(cust.value)"/>
+        <i class="bx bx-search-alt-2" (click)="showingSection(cust.value)"></i>
+      </form>
+    </ul>
+
+    <div class="search_com">
+      <div class="icons">
+        <i class="fa-regular fa-heart"></i>
+        <div class="quaintity">
+          <a routerLink="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div class="count" >{{this.quantity.length}}</div>
+          </a>
+        </div>
+        <i
+          class="fa-regular fa-user"
+          (click)="this.myboldrop = !this.myboldrop"
+          [class.active]="myboldrop"
+        ></i>
+        <ul class="drop_down" [class.active]="myboldrop">
+          <li>
+            <a href="#"><i class="bx bx-user"></i>Manage My Account</a>
+          </li>
+          <li>
+            <a href="#"><i class="bx bx-shopping-bag"></i>My Order</a>
+          </li>
+          <li>
+            <a href="#"><i class="bx bx-window-close"></i>My Cancellations</a>
+          </li>
+          <li>
+            <a href="#"><i class="bx bx-star"></i> My Reviews</a>
+          </li>
+          <li>
+            <a href="#"><i class="bx bx-log-out"></i> Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>

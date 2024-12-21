@@ -1,0 +1,131 @@
+$alt_color:#DB4444;
+
+#contact{
+    .container{
+        ul{
+            display: flex;
+
+            li{
+                
+                
+                a{
+                    margin:0px 10px;
+                    text-transform: capitalize;
+                    color:#000000;
+                  
+                }
+               
+            }
+            li:nth-child(1){
+                a{
+                    opacity: 30%;
+                }
+            }
+        }
+
+
+        .contacts{
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            // align-items: center;
+            padding: 50px 0px;
+            .left{
+                
+                .title{
+                    display: flex;
+                    gap: 16px;
+                    align-items: center;
+                    i{
+                        background-color: #DB4444;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 31px;
+                        font-size: 20px;
+                        text-align: center;
+                        line-height: 40px;
+                        color:#ffff;
+                    }
+                    h3{
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+                  
+                }
+                p{
+                    margin: 24px 0px;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+
+
+                .line{
+                    margin : 15px 0px;
+                }
+            }
+            form{
+                // display: flex;
+                flex: 1;
+                // background-color: red;
+
+                %inputsforms{
+                    padding: 10px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    background-color: #f5f5f5;
+                    outline: 0;
+                    border-radius: 4px;
+                    border: 0;
+                }
+                input{
+                    width: calc(100% / 3 - 16px);
+                    @media(max-width:992px){
+                        width: 100%;
+                        margin: 16px 0px;
+                    }
+                    height: 50px;
+                    @extend %inputsforms;
+                    margin-right: 16px;
+                }
+
+                .msg_contact{
+                    position: relative;
+                    textarea{
+                        width: 100%;
+                        height: 210px;
+                       @extend %inputsforms;
+                        margin: 16px 0px;
+                        resize: none;
+                    }
+
+                    .quaintity_msg{
+                        position: absolute;
+                        right: 10px;
+                        bottom:30px;
+                        color: #777;
+                        
+                    }
+
+
+                }
+
+              
+
+                button{
+                    padding: 16px 48px 16px 48px;
+                    background-color: $alt_color;
+                    color:#ffffff;
+                    border: 0;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    float: right;
+                    
+                }
+
+
+            }
+        }
+       
+        
+    }
+}

@@ -1,0 +1,59 @@
+#login .container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+#login .container .image img {
+  width: 700px;
+  height: 700px;
+}
+@media (max-width: 768px) {
+  #login .container .image img {
+    width: 100%;
+    height: 400px;
+  }
+}
+#login .container form h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+#login .container form p {
+  margin: 15px 0px;
+  font-size: 16px;
+  font-weight: 400;
+}
+#login .container form input {
+  display: block;
+  width: 100%;
+  outline: 0;
+  border: 0;
+  height: 32px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3019607843);
+  font-size: 16px;
+  padding: 10px;
+}
+#login .container form .btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 87px;
+}
+#login .container form button {
+  background-color: #db4444;
+  margin: 10px 0px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 143px;
+  height: 56px;
+}
+#login .container form a {
+  font-size: 15px;
+  font-weight: 400;
+  color: #db4444;
+}/*# sourceMappingURL=login.component.css.map */

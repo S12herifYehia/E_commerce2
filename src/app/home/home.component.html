@@ -1,0 +1,472 @@
+<app-settings></app-settings>
+
+<div class="msg_addcart" #msgAddCart>تم اضافه المنتج</div>
+<div class="landing_home">
+  <div class="container">
+    <aside>
+      <ul>
+        <li><a href="#">Woman’s Fashion</a> <span>></span></li>
+        <li><a href="#">Men’s Fashion </a><span>></span></li>
+        <li><a href="#">Electronics</a></li>
+        <li><a href="#">Home & Lifestyle</a></li>
+        <li><a href="#">Medicine</a></li>
+        <li><a href="#">Sports & Outdoor</a></li>
+        <li><a href="#">Baby’s & Toys</a></li>
+        <li><a href="#">Groceries & Pets</a></li>
+        <li><a href="#">Health & Beauty</a></li>
+      </ul>
+    </aside>
+    <!-- <div class="slider">
+      <div class="content">
+        <div class="info">
+          <div class="img_iphone">
+            <img src="assets/apple_landing.png" alt="land" />
+            <p>iphone 14 series</p>
+          </div>
+
+          <h1>Up to 10% off Voucher</h1>
+
+          <a href="#">shop now <i class="bx bx-right-arrow-alt"></i></a>
+        </div>
+        <img class="land_img" src="assets/iphone_landing.jpeg" alt="landing" />
+      </div>
+      <ul class="icons_slider">
+        <li></li>
+        <li></li>
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div> -->
+
+    <swiper-container
+      class="slider"
+      sildes-per-view="1"
+      pagination="true"
+      style="
+        --swiper-pagination-color: #db4444;
+        --swiper-pagination-bullet-inactive-color: #ffffff;
+        --swiper-pagination-bullet-size: 12px;
+      "
+      autoplay="true"
+      loop="true"
+      autoplay-delay="1000"
+      pagination-clickable="true"
+    >
+      <!-- autoplay="true"
+      autoplay-delay="1000"
+      loop="true" -->
+      <!-- <div class="content"> -->
+      <swiper-slide class="box">
+        <div class="info">
+          <div class="img_iphone">
+            <img src="assets/apple_landing.png" alt="land" />
+            <p>iphone 14 series</p>
+          </div>
+
+          <h1>Up to 10% off Voucher</h1>
+
+          <a href="#">shop now <i class="bx bx-right-arrow-alt"></i></a>
+        </div>
+        <img src="assets/home/todays1.png" alt="" srcset="" />
+      </swiper-slide>
+      <swiper-slide class="box">
+        <div class="info">
+          <div class="img_iphone">
+            <img src="assets/apple_landing.png" alt="land" />
+            <p>iphone 14 series</p>
+          </div>
+
+          <h1>Up to 10% off Voucher</h1>
+
+          <a href="#">shop now <i class="bx bx-right-arrow-alt"></i></a>
+        </div>
+        <img src="assets/home/month1.png" alt="" srcset="" />
+      </swiper-slide>
+      <swiper-slide class="box">
+        <div class="info">
+          <div class="img_iphone">
+            <img src="assets/apple_landing.png" alt="land" />
+            <p>iphone 14 series</p>
+          </div>
+
+          <h1>Up to 10% off Voucher</h1>
+
+          <a href="#">shop now <i class="bx bx-right-arrow-alt"></i></a>
+        </div>
+        <img src="assets/home/product5.png" alt="" srcset="" />
+      </swiper-slide>
+      <swiper-slide class="box">
+        <div class="info">
+          <div class="img_iphone">
+            <img src="assets/apple_landing.png" alt="land" />
+            <p>iphone 14 series</p>
+          </div>
+
+          <h1>Up to 10% off Voucher</h1>
+
+          <a href="#">shop now <i class="bx bx-right-arrow-alt"></i></a>
+        </div>
+        <img src="assets/home/featured1.png" alt="" srcset="" />
+      </swiper-slide>
+      <!-- </div> -->
+    </swiper-container>
+  </div>
+</div>
+
+<!-- Start todays -->
+
+<section id="todays" class="loo">
+  <div class="container">
+    <div class="glopal_heading">
+      <div class="head">
+        <span></span>
+        <h3>today,s</h3>
+      </div>
+      <div class="body">
+        <h2>Flash Sales</h2>
+        <div class="clock">
+          <div class="day clo">
+            <span>Days</span>
+            <h3>{{ this.day < 10 ? "0" + this.day:this.day }} <span>:</span></h3>
+          </div>
+
+          <div class="hours clo">
+            <span>hours</span>
+            <h3>{{ this.hour < 10 ? "0" + this.hour : this.hour }} <span>:</span></h3>
+          </div>
+          <div class="minute clo">
+            <span>minutes</span>
+            <h3>{{ this.minute < 10 ? "0" + this.minute : this.minute }} <span>:</span></h3>
+          </div>
+
+          <div class="seconds clo">
+            <span>seconds</span>
+            <h3>{{ this.second < 10 ? "0" + this.second :this.second}}</h3>
+          </div>
+        </div>
+        <div class="arrow">
+          <div class="arrow_left"><i class="bx bx-left-arrow-alt"></i></div>
+          <div class="arrow_right"><i class="bx bx-right-arrow-alt"></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="carts_discount">
+      <!-- <swiper-wrapper class="carts_discount" > -->
+
+      <div class="cart" *ngFor="let prod of tableprodtodays ; let b=index">
+        <div class="head_cart">
+          <span class="discount">-40%</span>
+
+          <div class="icons">
+            <i class="bx bx-heart"></i>
+            <i class="bx bxs-bullseye"></i>
+          </div>
+
+          <img [src]="prod.imgurl" alt="today" />
+          <button class="addcart" (click)="showAddcart(prod)">Add To Cart</button>
+        </div>
+        <div class="body_cart">
+          <h3 (click)="onShowDetails(prod)">{{ prod.title }}</h3>
+          <p class="price">
+            {{ prod.price | currency }}
+            <span class="discount">{{ prod.discount | currency }}</span>
+          </p>
+          <div class="star">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <span class="count">(88)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- </swiper-wrapper> -->
+    </div>
+    <a routerLink="/wishlist" class="view">View all catogery</a>
+  </div>
+</section>
+
+<!-- End Today,s -->
+<div class="container">
+  <div class="line"></div>
+</div>
+<!-- Start Catogery -->
+<section id="catogery">
+  <div class="container">
+    <div class="glopal_heading">
+      <div class="head">
+        <span></span>
+        <h3>Categories</h3>
+      </div>
+      <div class="body">
+        <h2>Browse By Category</h2>
+        <div class="arrow">
+          <div class="arrow_left"><i class="bx bx-left-arrow-alt"></i></div>
+          <div class="arrow_right"><i class="bx bx-right-arrow-alt"></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="cards_catogery">
+      <div class="card">
+        <i class="bx bx-phone"></i>
+        <h4>phones</h4>
+      </div>
+
+      <div class="card">
+        <i class="bx bx-phone"></i>
+        <h4>Computers</h4>
+      </div>
+
+      <div class="card">
+        <i class="bx bx-phone"></i>
+        <h4>SmartWatch</h4>
+      </div>
+
+      <div class="card">
+        <i class="bx bx-phone"></i>
+        <h4>Camera</h4>
+      </div>
+      <div class="card">
+        <i class="bx bx-phone"></i>
+        <h4>Head Phones</h4>
+      </div>
+      <div class="card">
+        <i class="bx bx-phone"></i>
+        <h4>Gaming</h4>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container">
+  <div class="line"></div>
+</div>
+
+<!-- End Catogery -->
+
+<!-- Start Month -->
+<section id="month">
+  <div class="container">
+    <div class="glopal_heading">
+      <div class="head">
+        <span></span>
+        <h3>This Month</h3>
+      </div>
+      <div class="body">
+        <h2>Best Selling Products</h2>
+        <div class="arrow">
+          <a routerLink="wishlist">view All</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="carts_discount">
+      <div class="cart" *ngFor="let month of tablemonth">
+        <div class="head_cart">
+          <div class="icons">
+            <i class="bx bx-heart"></i>
+            <i class="bx bxs-bullseye"></i>
+          </div>
+
+          <img [src]="month.imgurl" alt="month" />
+        </div>
+        <div class="body_cart">
+          <h3>{{ month.title }}</h3>
+          <p class="price">
+            {{ month.price | currency
+            }}<span class="discount">{{ month.discount | currency }}</span>
+          </p>
+          <div class="star">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star no-active"></i>
+            <i class="bx bxs-star no-active"></i>
+            <span class="count">(88)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Month -->
+<!-- Start img Cato -->
+
+<section id="img_catogery">
+  <div class="container">
+    <div class="content_cato">
+      <span class="head_title">Categories</span>
+      <h2>Enhance Your Music Experience</h2>
+      <div class="clock">
+        <div class="cart_clo">
+          <h5>23</h5>
+          <p>hours</p>
+        </div>
+        <div class="cart_clo">
+          <h5>05</h5>
+          <p>Days</p>
+        </div>
+        <div class="cart_clo">
+          <h5>59</h5>
+          <p>minutes</p>
+        </div>
+        <div class="cart_clo">
+          <h5>35</h5>
+          <p>seconds</p>
+        </div>
+      </div>
+      <a href="#" class="buy">Buy Now!</a>
+    </div>
+    <img src="assets/home/catogerys.png" alt="cato" />
+  </div>
+</section>
+
+<!-- End img Cato -->
+
+<!-- Start Products -->
+
+<section id="products" class="loo">
+  <div class="container">
+    <div class="glopal_heading">
+      <div class="head">
+        <span></span>
+        <h3>Our Products</h3>
+      </div>
+      <div class="body">
+        <h2>Explore Our Products</h2>
+
+        <div class="arrow">
+          <div class="arrow_left"><i class="bx bx-left-arrow-alt"></i></div>
+          <div class="arrow_right"><i class="bx bx-right-arrow-alt"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carts_discount">
+      <div class="cart" *ngFor="let product of ourproduct">
+        <div class="head_cart">
+          <div class="icons">
+            <i class="bx bx-heart"></i>
+            <i class="bx bxs-bullseye"></i>
+          </div>
+
+          <img [src]="product.imgurl" alt="today" />
+          <a href="#" class="addcart">Add To Cart</a>
+        </div>
+        <div class="body_cart">
+          <h3>{{product.title}}</h3>
+          <p class="price">{{product.price | currency}}  <span class="discount">{{product.discount | currency}}</span></p>
+          <div class="star">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <span class="count">(88)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a routerLink="/wishlist" class="view">View all Products</a>
+  </div>
+</section>
+
+<!-- End products -->
+
+<!-- start Featured -->
+<section id="featured">
+  <div class="container">
+    <div class="glopal_heading">
+      <div class="head">
+        <span></span>
+        <h3>Featured</h3>
+      </div>
+      <div class="body">
+        <h2>New Arrival</h2>
+        <div class="arrow">
+          <div class="arrow_left"><i class="bx bx-left-arrow-alt"></i></div>
+          <div class="arrow_right"><i class="bx bx-right-arrow-alt"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flexes">
+      <div class="left">
+        <img src="assets/home/featured1.png" alt="" srcset="" />
+        <div class="content">
+          <h4>PlayStation 5</h4>
+          <p>Black and White version of the PS5 coming out on sale.</p>
+          <a href="#">Shop Now</a>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="right_top">
+          <img src="assets/home/featured2.jpeg" alt="featured" />
+
+          <div class="content">
+            <h4>Women’s Collections</h4>
+            <p>Featured woman collections that give you another vibe.</p>
+            <a href="#">Shop Now</a>
+          </div>
+        </div>
+        <div class="flexes2">
+          <div class="left_bottom_right">
+            <img src="assets/home/featured3.png" alt="featured" />
+            <div class="content">
+              <h4>Speakers</h4>
+              <p>Amazon wireless speakers</p>
+              <a href="#">Shop Now</a>
+            </div>
+          </div>
+
+          <div class="right_bottom_right">
+            <img src="assets/home/featured4.png" alt="featured" />
+            <div class="content">
+              <h4>Perfume</h4>
+              <p>GUCCI INTENSE OUD EDP</p>
+              <a href="#">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- End Featured -->
+
+<!-- Section Cards -->
+<section id="services">
+  <div class="container">
+    <div class="cards">
+      <div class="card">
+        <div class="icons">
+          <i class="bx bxs-message-rounded-check"></i>
+        </div>
+        <h3>FREE AND FAST DELIVERY</h3>
+        <p>Free delivery for all orders over $140</p>
+      </div>
+
+      <div class="card">
+        <div class="icons">
+          <i class="bx bxs-message-rounded-check"></i>
+        </div>
+        <h3>F24/7 CUSTOMER SERVICE</h3>
+        <p>Friendly 24/7 customer support</p>
+      </div>
+
+      <div class="card">
+        <div class="icons">
+          <i class="bx bxs-message-rounded-check"></i>
+        </div>
+        <h3>MONEY BACK GUARANTEE</h3>
+        <p>We reurn money within 30 days</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Cards -->
